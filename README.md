@@ -203,4 +203,3 @@
 </body>
 </html>
 
-Independent offline-first public service information prototype
