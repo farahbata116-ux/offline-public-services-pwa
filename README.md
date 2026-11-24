@@ -1,4 +1,3 @@
-# offline-public-services-pwa
 
 <!DOCTYPE html>
 <html lang="en">
