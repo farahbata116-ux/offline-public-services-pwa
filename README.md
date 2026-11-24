@@ -1,17 +1,16 @@
+🇰🇪 Kenya Public Services PWA
 
-# 🇰🇪 Kenya Public Services PWA
+Independent Offline-First Public Service Information Platform
 
-**Independent Offline-First Public Service Information Platform**
+An independent, mobile-friendly public information project designed to help people discover national and county government services in Kenya.
 
-An independent mobile-friendly public information project designed to help people discover national and county government services in Kenya.
-
-## About the Project
+About the Project
 
 Kenya Public Services PWA aims to make public service information easier to find, understand and access, especially for people using mobile devices or experiencing limited internet connectivity.
 
 The project covers Kenya's national government services and all 47 county governments.
 
-## Project Objectives
+Project Objectives
 
 1. Improve access to public service information.
 2. Organise national and county government service directories.
@@ -20,7 +19,7 @@ The project covers Kenya's national government services and all 47 county govern
 5. Develop offline access to selected public information.
 6. Promote responsible use of verified information.
 
-## Current Features
+Current Features
 
 - Mobile-responsive homepage.
 - National government service directory.
@@ -29,28 +28,32 @@ The project covers Kenya's national government services and all 47 county govern
 - General public service preparation checklist.
 - Links to selected government websites.
 - Online and offline connection status indicator.
+- Progressive Web App manifest.
+- Initial service-worker implementation and application-shell caching.
+- SVG application icon.
 - Independent project disclaimer.
 
-**Development status:** Initial prototype.
+Development status: Initial prototype — technical validation in progress.
 
-Offline caching, detailed county service information and verified county office directories are planned but not yet implemented.
+A web app manifest and service worker are present. Initial offline caching has been implemented, but complete offline operation, installation behaviour, cache-update handling and offline fallback functionality have not yet been fully validated.
 
-## National Government Information Sources
+Detailed county service information and verified county office directories are not yet available.
 
-| Institution | Official Website |
-|---|---|
-| eCitizen | https://www.ecitizen.go.ke/ |
-| Immigration Services | https://immigration.go.ke/ |
-| Kenya Revenue Authority | https://www.kra.go.ke/ |
-| Huduma Kenya | https://www.hudumakenya.go.ke/ |
-| National Transport and Safety Authority | https://www.ntsa.go.ke/ |
-| National Social Security Fund | https://www.nssf.or.ke/ |
-| Social Health Authority | https://sha.go.ke/ |
-| Office of the Data Protection Commissioner | https://www.odpc.go.ke/ |
+National Government Information Sources
+
+Institution| Official Website
+eCitizen| https://www.ecitizen.go.ke/
+Immigration Services| https://immigration.go.ke/
+Kenya Revenue Authority| https://www.kra.go.ke/
+Huduma Kenya| https://www.hudumakenya.go.ke/
+National Transport and Safety Authority| https://www.ntsa.go.ke/
+National Social Security Fund| https://www.nssf.or.ke/
+Social Health Authority| https://sha.go.ke/
+Office of the Data Protection Commissioner| https://www.odpc.go.ke/
 
 These links are provided for information and reference. Users should verify current procedures directly with the relevant institution.
 
-## Kenya's 47 Counties
+Kenya's 47 Counties
 
 The intended county directory covers:
 
@@ -104,32 +107,47 @@ The intended county directory covers:
 
 Detailed county service information and office contacts will be added progressively after verification.
 
-## Development Roadmap
+Development Roadmap
+
+Initial implementation
 
 - [x] Create GitHub repository.
 - [x] Develop initial HTML homepage.
 - [x] Add national service references.
 - [x] Add the 47-county directory.
 - [x] Implement basic search.
-- [ ] Create web app manifest.
-- [ ] Implement service worker.
-- [ ] Enable offline caching.
+- [x] Create web app manifest.
+- [x] Add initial service-worker implementation.
+
+Technical repairs and validation
+
+- [ ] Repair and validate offline caching.
+- [ ] Implement and validate an offline fallback page.
+- [ ] Protect unrelated browser caches during service-worker updates.
+- [ ] Add and validate standard PNG application icons.
+- [ ] Validate manifest and installation behaviour.
+- [ ] Test offline reload and navigation.
+- [ ] Test installation and offline operation on Android.
+
+Future development
+
 - [ ] Develop individual county information pages.
 - [ ] Add verified county office directories.
 - [ ] Add service-specific requirements and checklists.
 - [ ] Establish information verification and update procedures.
-- [ ] Test installation on Android.
-- [ ] Deploy the application.
+- [ ] Expand accessibility and usability testing.
+- [ ] Complete deployment validation.
 
-## Technology Stack
+Technology Stack
 
 - HTML5
 - CSS3
 - JavaScript
-- Progressive Web App (PWA) technologies
+- Progressive Web App technologies
+- Service Workers and Cache API
 - GitHub for source-code management
 
-## Privacy and Responsible Use
+Privacy and Responsible Use
 
 The project is intended as a public information directory.
 
@@ -137,7 +155,26 @@ It should not request government account passwords, sensitive personal informati
 
 Users should complete official applications and transactions only through verified government platforms.
 
-## Important Disclaimer
+The application is intended to cache its own public application files. It does not claim to provide offline access to government account systems, payment services or third-party websites.
+
+Testing and Quality Assurance
+
+The presence of a service worker or manifest does not, by itself, establish that all PWA features work correctly.
+
+The following checks remain necessary:
+
+- Confirm successful application loading over HTTPS.
+- Confirm service-worker registration and activation.
+- Confirm application-shell caching.
+- Confirm offline homepage loading.
+- Confirm offline fallback behaviour.
+- Confirm cache updates do not delete unrelated same-origin caches.
+- Confirm all manifest icons load correctly.
+- Test installation and operation using Android Chrome and a desktop browser.
+
+Testing results will be documented after the relevant checks have actually been performed.
+
+Important Disclaimer
 
 Kenya Public Services PWA is an independent public information prototype.
 
@@ -147,17 +184,14 @@ The project does not issue government documents, process applications, collect g
 
 Government procedures, requirements, contacts and fees may change. Users must confirm current information with the relevant official institution.
 
-## Repository
+Repository
 
-GitHub:
-https://github.com/farahbata116-ux/offline-public-services-pwa
+GitHub: https://github.com/farahbata116-ux/offline-public-services-pwa
 
-**Project:** Kenya Public Services PWA
-
-**Version:** 1.0 — Initial Prototype
-
-**Status:** Independent Development Initiative
+Project: Kenya Public Services PWA
+Version: 1.0 — Initial Prototype
+Status: Independent Development Initiative
 
 ---
 
-*Learn. Access. Connect.*
+Learn. Access. Connect.
